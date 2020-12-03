@@ -68,15 +68,18 @@ bob5.display();
   rope4.display();
   rope5.display();
 
-  keyPressed();
+  
 }
-
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
    
-	  Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-85,y:5});
-  
-	}
+	  Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-85,y:65});
+	 }
+	 if (keyCode === UP_ARROW && bob1.x===200 ) {
+   
+		Matter.Body.applyForce(bob5.body,bob5.body.position,{x:85,y:-65});
+	
+	  }
 }
 
 
